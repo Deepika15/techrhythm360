@@ -1,0 +1,265 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Hi,"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Individual feedback for the Squad members.",
+            "wrap": true,
+            "size": "Medium"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 40,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "wrap": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 10,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Colloboration",
+                            "size": "Small",
+                            "weight": "Bolder",
+                            "wrap": true,
+                            "maxLines": 0,
+                            "spacing": "None"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 10,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Respect, One Team Culture",
+                            "wrap": true,
+                            "size": "Small",
+                            "weight": "Bolder"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 10,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Courageous",
+                            "wrap": true,
+                            "size": "Small",
+                            "weight": "Bolder"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 10,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Focus, Quality of delivery",
+                            "wrap": true,
+                            "size": "Small",
+                            "weight": "Bolder"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 10,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Openness, Receptiveness to change",
+                            "wrap": true,
+                            "size": "Small",
+                            "weight": "Bolder"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 10,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Commitment, Problem solving",
+                            "wrap": true,
+                            "size": "Small",
+                            "weight": "Bolder"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 40
+                },
+                {
+                    "type": "Column",
+                    "width": 60,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "(1-Never, 2-Rarely, 3-Occationaly, 4-Frequestly, 5-Consistently)",
+                            "wrap": true,
+                            "size": "Small",
+                            "color": "Default",
+                            "horizontalAlignment": "Center"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "id": "colnvmsetud",
+            "$data": "${emails}",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 40,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${emailId}",
+                            "id": "cardContent${$index}",
+                            "isSubtle": true,
+                            "horizontalAlignment": "Left",
+                            "spacing": "None",
+                            "weight": "Bolder"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 10,
+                    "items": [
+                        {
+                            "type": "Input.Number",
+                            "errorMessage": "Please select number from 1-5",
+                            "min": 1,
+                            "max": 5,
+                            "id": "${emailId}1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 10,
+                    "items": [
+                        {
+                            "type": "Input.Number",
+                            "min": 1,
+                            "max": 5,
+                            "id": "${emailId}2",
+                            "errorMessage": "Please select number from 1-5"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 10,
+                    "items": [
+                        {
+                            "type": "Input.Number",
+                            "id": "${emailId}3",
+                            "min": 1,
+                            "max": 5,
+                            "errorMessage": "Please select number from 1-5"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 10,
+                    "items": [
+                        {
+                            "type": "Input.Number",
+                            "id": "${emailId}4",
+                            "min": 1,
+                            "max": 5,
+                            "errorMessage": "Please select number from 1-5"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 10,
+                    "items": [
+                        {
+                            "type": "Input.Number",
+                            "id": "${emailId}5",
+                            "min": 1,
+                            "max": 5,
+                            "errorMessage": "Please select number from 1-5"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 10,
+                    "items": [
+                        {
+                            "type": "Input.Number",
+                            "id": "${emailId}6",
+                            "min": 1,
+                            "max": 5,
+                            "errorMessage": "Please select number from 1-5"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Addidtional comments",
+            "id": "OtherComment",
+            "isMultiline": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Refer here for more details about categories and constructive feedback samples",
+            "wrap": true,
+            "horizontalAlignment": "Right",
+            "size": "Small"
+        },
+        {
+            "type": "ActionSet",
+            "horizontalAlignment": "Right",
+            "actions": [
+                {
+                    "type": "Action.Execute",
+                    "title": "Send Feedback",
+                    "verb": "userlike",
+                    "fallback": "Action.Submit"
+                }
+            ]
+        }
+    ],
+    "msteams": {
+        "width": "Full"
+    },
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3"
+}

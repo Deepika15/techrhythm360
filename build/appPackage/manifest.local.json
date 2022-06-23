@@ -1,0 +1,151 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.11",
+    "version": "1.0.0",
+    "id": "03bece7e-6610-4dc7-95ab-580735ac1f01",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "Teams App, Inc.",
+        "websiteUrl": "https://www.example.com",
+        "privacyUrl": "https://www.example.com/privacy",
+        "termsOfUseUrl": "https://www.example.com/termsofuse"
+    },
+    "icons": {
+        "color": "resources/color.png",
+        "outline": "resources/outline.png"
+    },
+    "name": {
+        "short": "ScrumFeedbackTeamsApp",
+        "full": "Full name for ScrumFeedbackTeamsApp"
+    },
+    "description": {
+        "short": "Short description of ScrumFeedbackTeamsApp",
+        "full": "Full description of ScrumFeedbackTeamsApp"
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [
+        {
+            "botId": "8d5cc772-2bb3-43fe-98a7-8a0f263e010c",
+            "scopes": [
+                "personal",
+                "team",
+                "groupchat"
+            ],
+            "supportsFiles": false,
+            "isNotificationOnly": false,
+            "commandLists": [
+                {
+                    "scopes": [
+                        "personal",
+                        "team",
+                        "groupchat"
+                    ],
+                    "commands": [
+                        {
+                            "title": "welcome",
+                            "description": "Resend welcome card of this Bot"
+                        },
+                        {
+                            "title": "learn",
+                            "description": "Learn about Adaptive Card and Bot Command"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "composeExtensions": [
+        {
+            "botId": "8d5cc772-2bb3-43fe-98a7-8a0f263e010c",
+            "commands": [
+                {
+                    "id": "createCard",
+                    "context": [
+                        "compose"
+                    ],
+                    "description": "Command to run action to create a Card from Compose Box",
+                    "title": "Create Card",
+                    "type": "action",
+                    "parameters": [
+                        {
+                            "name": "title",
+                            "title": "Card title",
+                            "description": "Title for the card",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "subTitle",
+                            "title": "Subtitle",
+                            "description": "Subtitle for the card",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "text",
+                            "title": "Text",
+                            "description": "Text for the card",
+                            "inputType": "textarea"
+                        }
+                    ]
+                },
+                {
+                    "id": "shareMessage",
+                    "context": [
+                        "message"
+                    ],
+                    "description": "Test command to run action on message context (message sharing)",
+                    "title": "Share Message",
+                    "type": "action",
+                    "parameters": [
+                        {
+                            "name": "includeImage",
+                            "title": "Include Image",
+                            "description": "Include image in Hero Card",
+                            "inputType": "toggle"
+                        }
+                    ]
+                },
+                {
+                    "id": "searchQuery",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Test command to run query",
+                    "title": "Search",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "searchQuery",
+                            "title": "Search Query",
+                            "description": "Your search query",
+                            "inputType": "text"
+                        }
+                    ]
+                }
+            ],
+            "messageHandlers": [
+                {
+                    "type": "link",
+                    "value": {
+                        "domains": [
+                            "*.botframework.com"
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "configurableTabs": [],
+    "staticTabs": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "2839-210-10-5-170.ngrok.io"
+    ],
+    "webApplicationInfo": {
+        "id": "5f169dd3-b910-4679-8084-70b6e192888c",
+        "resource": "api://botid-8d5cc772-2bb3-43fe-98a7-8a0f263e010c"
+    }
+}

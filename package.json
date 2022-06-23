@@ -1,0 +1,17 @@
+{
+    "name": "ScrumFeedbackTeamsApp",
+    "version": "0.0.1",
+    "description": "",
+    "author": "",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "devDependencies": {
+        "@microsoft/teamsfx-cli": "0.*"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "botframework-connector": "^4.15.0",
+        "mongoose": "^6.3.0"
+    }
+}

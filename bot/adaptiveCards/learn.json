@@ -1,0 +1,61 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Large",
+      "weight": "Bolder",
+      "text": "Scrum Feedback Form",
+      "spacing": "Medium"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Individual feedback for the squad members",
+      "wrap": true,
+      "spacing": "Medium"
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "CompactSelectVal",
+      "isRequired": true,
+      "label": "Email Address of the individual you are giving feedback for:",
+      "size": "Medium",
+      "weight": "Bolder",
+      "errorMessage": "This is a required input",
+      "value": "1",
+      "choices": [
+        {
+          "$data": "${emails}",
+          "title": "${emailId}",
+          "value": "${value}"
+        }
+      ],
+      "spacing": "Large"
+    },
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "Suggestions for growth & improvement (if any)",
+      "wrap": true,
+      "spacing": "Large"
+    },
+    {
+      "type": "Input.Text",
+      "style": "text",
+      "isMultiline": true,
+      "id": "MultiLineVal",
+      "spacing": "Large"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Execute",
+      "title": "SUBMIT",
+      "verb": "userlike",
+      "fallback": "Action.Submit"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.4"
+}
